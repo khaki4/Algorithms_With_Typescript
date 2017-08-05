@@ -9,14 +9,13 @@
 for (let i = 1; i < 101; i++) {
   const isFizz = i % 3 === 0;
   const isBuzss = i % 5 === 0;
-  let result;
-  if (isFizz && isBuzss) {
-    result = 'FizzBuzz'
-  } else if (isFizz) {
-    result ='Fizz';
-  } else if (isBuzss) {
-    result = 'Buzz';
-  } else {
-    result = i;
-  }
+  const result =
+  isFizz && isBuzss
+    ? 'FizzBuzz'
+    : isFizz
+      ? 'Fizz'
+      : isBuzss
+        ? 'Buzz'
+        : i;
+  console.log(result);
 }
